@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/area_content_activity_dataWarehouse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <android.widget.ImageButton
+            android:id="@+id/button_exit"
+            style="@style/button_exit"
+            android:contentDescription="button_exit"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/logo_activity_dataWarehouse"
+            style="@style/logo_small"
+            android:contentDescription="logo_activity_dataWarehouse"
+            tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/label_activity_dataWarehouse"
+            style="@style/label_dataList"
+            android:layout_below="@+id/button_exit"
+            android:text="Данные склада"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/label_codeWarehouse"
+            style="@style/label_dataElement"
+            android:layout_below="@+id/label_activity_dataWarehouse"
+            android:text="Код:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textBox_codeWarehouse"
+            style="@style/textBox_dataElement"
+            android:layout_below="@+id/label_codeWarehouse"
+            android:text=""
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/label_nameWarehouse"
+            style="@style/label_dataElement"
+            android:layout_below="@+id/textBox_codeWarehouse"
+            android:text="Наименование:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textBox_nameWarehouse"
+            style="@style/textBox_dataElement"
+            android:layout_below="@+id/label_nameWarehouse"
+            android:text=""
+            tools:ignore="HardcodedText" />
+
+        <android.widget.Button
+            android:id="@+id/button_activity_data_warehouse"
+            style="@style/button_scan"
+            android:text="Сканировать QR-код партии"
+            android:background="@drawable/rounded_dark_red_button"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

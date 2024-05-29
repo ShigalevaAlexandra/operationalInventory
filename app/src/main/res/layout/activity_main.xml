@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/area_content_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo_activity_main"
+            android:src="@drawable/logo"
+            android:layout_width="401dp"
+            android:layout_height="146dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="logo_activity_main"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/label_activity_main"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="ОИ \nв складском \nхозяйстве"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="45sp"
+            android:textColor="@color/dark_gray"
+            tools:ignore="HardcodedText" />
+
+        <android.widget.Button
+            android:id="@+id/button_activity_main"
+            style="@style/button_scan"
+            android:text="Сканировать QR-код склада"
+            android:background="@drawable/rounded_light_red_button"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/area_content_activity_dataParty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <android.widget.ImageButton
+            android:id="@+id/button_exit"
+            style="@style/button_exit"
+            android:contentDescription="button_exit"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/logo_activity_dataParty"
+            style="@style/logo_small"
+            android:contentDescription="logo_activity_dataParty"
+            tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+        <ScrollView
+            android:id="@+id/scroll_activity_dataParty"
+            android:layout_below="@+id/button_exit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/scroll_area_activity_dataParty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/label_activity_dataParty"
+                    style="@style/label_dataList"
+                    android:text="Данные партии"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/label_codeParty"
+                    style="@style/label_dataElement"
+                    android:layout_below="@+id/label_activity_dataParty"
+                    android:text="Код:"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textBox_codeParty"
+                    style="@style/textBox_dataElement"
+                    android:layout_below="@+id/label_codeParty"
+                    android:text=""
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/label_nameParty"
+                    style="@style/label_dataElement"
+                    android:layout_below="@+id/textBox_codeParty"
+                    android:text="Номенклатура:"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textBox_nameParty"
+                    style="@style/textBox_dataElement"
+                    android:layout_below="@+id/label_nameParty"
+                    android:text=""
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/label_quantityParty"
+                    style="@style/label_dataElement"
+                    android:layout_below="@+id/textBox_nameParty"
+                    android:text="Общее кол-во (шт):"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textBox_quantityParty"
+                    style="@style/textBox_dataElement"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/label_quantityParty"
+                    android:text=""
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/label_quantityFreeParty"
+                    style="@style/label_dataElement"
+                    android:layout_below="@+id/textBox_quantityParty"
+                    android:text="Доступное кол-во (шт):"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textBox_quantityFreeParty"
+                    style="@style/textBox_dataElement"
+                    android:layout_below="@+id/label_quantityFreeParty"
+                    android:text=""
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/label_quantityReserveParty"
+                    style="@style/label_dataElement"
+                    android:layout_below="@+id/textBox_quantityFreeParty"
+                    android:text="Резерв. кол-во (шт):"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textBox_quantityReserveParty"
+                    style="@style/textBox_dataElement"
+                    android:layout_below="@+id/label_quantityReserveParty"
+                    android:layout_marginBottom="200dp"
+                    android:text=""
+                    tools:ignore="HardcodedText" />
+
+                <android.widget.Button
+                    android:id="@+id/button_activity_data_party"
+                    style="@style/button_scan"
+                    android:layout_below="@id/textBox_quantityReserveParty"
+                    android:text="Сканировать QR-код партии"
+                    android:background="@drawable/rounded_dark_red_button"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
