@@ -131,8 +131,6 @@ class DataPartyActivity : AppCompatActivity() {
         return matchResult?.value ?: "не распознан"
     }
 
-    /*--SOAP request - GET PARTY INFO ---------------------------------------------------------------------------------------*/
-
     /*--saving the values of active variables--------------------------------------------------------------------------------*/
 
     override fun onSaveInstanceState(outState: Bundle) {

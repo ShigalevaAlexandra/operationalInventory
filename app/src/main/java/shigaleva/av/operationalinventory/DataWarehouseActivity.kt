@@ -84,8 +84,8 @@ class DataWarehouseActivity : AppCompatActivity() {
 
             // saving scanned party code to default
             val intent = Intent(applicationContext, DataPartyActivity::class.java)
-            intent.putExtra("CodeParty", codeParty)
             intent.putExtra("CodeWarehouse", codeWarehouse)
+            intent.putExtra("CodeParty", codeParty)
 
             startActivity(intent)
         }
@@ -110,8 +110,6 @@ class DataWarehouseActivity : AppCompatActivity() {
 
         return matchResult?.value ?: "не распознан"
     }
-
-    /*--SOAP request - GET PARTY INFO ---------------------------------------------------------------------------------------*/
 
     /*--saving the values of active variables--------------------------------------------------------------------------------*/
 

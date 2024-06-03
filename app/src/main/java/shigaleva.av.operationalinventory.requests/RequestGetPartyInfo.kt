@@ -30,7 +30,7 @@ fun createSoapRequestGetPartyInfo(codeWarehouse: String, codeParty: String): Mut
 // function for receiving response from SOAP UI
 private fun callSoapService(soapRequest: String): MutableList<String> {
 
-    var partyInfo = mutableListOf<String>()
+    val partyInfo = mutableListOf<String>()
     var connect: HttpURLConnection? = null
 
     try {

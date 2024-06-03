@@ -1,10 +1,6 @@
-@file:Suppress("DEPRECATION")
-
 package shigaleva.av.operationalinventory
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -50,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     // receiving warehouse code using QR code
     private val scanCodeWarehouseLauncher = registerForActivityResult(ScanContract()) {
-        result ->
+            result ->
         if (result.contents == null) Toast.makeText(this, "Данный QR-код недействителен", Toast.LENGTH_SHORT).show()
         else {
             codeWarehouse = getCodeWarehouse(result)
@@ -64,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // creating a function to customize the display scan launcher
-     private fun scanCodeWarehouse() {
+    private fun scanCodeWarehouse() {
         val options = ScanOptions()
         options.setDesiredBarcodeFormats(ScanOptions.QR_CODE)
         options.setPrompt("Разместите QR-код внутри рамки")
@@ -83,10 +79,7 @@ class MainActivity : AppCompatActivity() {
         return matchResult?.value ?: "не распознан"
     }
 
-    /*--SOAP request - GET WAREHOUSE BY CODE---------------------------------------------------------------------------------*/
-
-
-    /*--saving the values of active variables--------------------------------------------------------------------------------*/
+    /*--saving the values of active variables-------------------------------------------------------------------------------*/
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
